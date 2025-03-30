@@ -21,6 +21,12 @@ It should also be noted that using this code, the password has to start with A. 
 
 I am aware that I am a horrible programmer and there are definitely better ways to do this. 
 
+Here is a very poorly drawn fritzing doc of how to connect up the hardware : 
+
+![Untitled Sketch_bb](https://github.com/user-attachments/assets/751bbf9b-f8a4-428e-b5af-e2690df7944a)
+
+
+
 
 
 
