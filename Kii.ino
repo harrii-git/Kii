@@ -44,7 +44,7 @@ void loop()
         char buttonRight = (button & BUTTON_RIGHT) ? '<' : '.';
         char buttonDown = (button & BUTTON_DOWN)  ? 'v' : '.';
         char buttonUp = (button & BUTTON_UP)     ? '^' : '.';
-        char lockDoor = (button & BUTTON_A && button & BUTTON_B);            
+        char lockDoor = (button & BUTTON_A && button & BUTTON_B);                            //To lock the door press a and b at the same time
 
         Serial.println(buttonA);
         Serial.println(buttonB);
@@ -58,13 +58,13 @@ void loop()
         if (button & passwordSequence[currentStep])                                                 // Correct button pressed for the current step
         {
             Serial.print("Correct button pressed: ");
-            currentStep++;  // Move to the next step in the password sequence
+            currentStep++;                                                                          // Move to the next step in the password sequence
 
-            if (currentStep == 4)  // Password sequence is complete (A -> B -> ONE)
+            if (currentStep == 4)                                                                         // Password sequence is complete (A -> 1 -> 2 -> B)
             {
                 Serial.println("Password sequence entered! Hello!");
                 myServo.write(180);
-                currentStep = 0;  // Reset sequence after completion
+                currentStep = 0;                                                                          // Reset sequence after completion
             }
 
             if (lockDoor) {
